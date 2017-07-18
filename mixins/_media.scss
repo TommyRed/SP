@@ -1,0 +1,34 @@
+//
+//  Short hand for media queries
+//
+
+//  Dependencies
+@import "../_breakpoints";
+
+//
+//  Media query without preset breakpoints
+//
+@mixin mq($breakpoint) {
+  @media only screen and (min-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+//
+//  Query with preset breakpoints
+//
+@mixin query($media) {
+  @if $media == small {
+    @media only screen and (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $media == medium {
+    @media only screen and (min-width: $breakpoint-small + 1) {
+      @content;
+    }
+  } @else if $media == large {
+    @media only screen and (min-width: $breakpoint-large) {
+      @content;
+    }
+  }
+}

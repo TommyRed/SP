@@ -1,0 +1,37 @@
+//
+//  Properties of CSS3 flex (box) item
+//
+
+//  Dependencies
+@import "../functions/_prefixer";
+
+//
+//  Flex
+//
+@mixin flex($rule: 0 1 auto) {
+
+  @include prefix(flex, $rule, webkit ms webkit-box moz-box);
+
+  flex: $rule;
+}
+
+//
+//  Align self
+//
+@mixin align-self($rule: auto) {
+
+  @include prefix(slign-self, $rule, webkit);
+
+  align-self: $rule;
+}
+
+//
+//  Flex order
+//
+@mixin order($rule: 1){
+
+  @include prefix(ordinal-groudp, $rule, webkit moz-box);
+  @include prefix(order, $rule, webkit ms-flex);
+
+  order: $rule;
+}

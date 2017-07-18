@@ -1,0 +1,17 @@
+//
+//  Counting functions
+//
+
+//
+//  Count to EM
+//
+@function em($value, $pixel-size: 16){
+  @return ($value / $pixel-size) * 1em;
+}
+
+//
+//  Count to REM
+//
+@function rem($value, $pixel-size: 16){
+  @return ($value / $pixel-size) * 1rem;
+}

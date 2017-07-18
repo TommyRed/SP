@@ -1,0 +1,61 @@
+//
+//  Properties of CSS3 flex (box) container
+//
+
+// Dependencies
+@import "../functions/prefixer";
+
+//
+//  Display flex
+//
+@mixin display($rule) {
+  @if $rule == "flex" {
+
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+  } @else if $rule == "inline-flex" {
+
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+
+  } @else {
+    display: $rule;
+  }
+}
+
+//
+//  Flex flow
+//
+@mixin flex-flow($rule: row wrap) {
+
+  @include prefix(flex-flow, $rule, webkit);
+
+  flex-flow: $rule;
+}
+
+//
+//  Align items
+//
+@mixin align-items($rule: flex-start) {
+
+  @include prefix(align, $rule, webkit-box moz-box ms-flex);
+  @include prefix(align-items, $rule, webkit);
+
+  align-items: $rule;
+}
+
+//
+//  Justify content
+//
+@mixin justify-content($rule: flex-start) {
+
+  @include prefix(justify-content, $rule, webkit);
+
+  justify-content: $rule;
+}

@@ -1,0 +1,25 @@
+//
+//  Mixins for creating grid
+//
+
+//  Dependencies
+@import "flex";
+
+//  Variables
+$columns: 12;
+
+//
+//  Create row
+//
+@mixin make-row($flex-rule: row wrap) {
+  @include display(flex);
+  @include flex-flow($flex-rule);
+}
+
+//
+//  Create column
+//
+@mixin make-col($size: 12, $flex: 0 1 auto) {
+  @include flex($flex);
+  width: percentage($size / $columns);
+}
