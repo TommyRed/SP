@@ -1,0 +1,60 @@
+//
+//	Base utilities which are extended through project
+//
+
+//	Center content
+//	- Must be used on flex container
+%center-content {
+	@include align-items(center);
+	@include justify-content(center);
+}
+
+//	Screen reader text
+%srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+//	Headline like text
+%headline-text{
+	color: palette(black, asphalt);
+	font-size: 1.5em;
+	letter-spacing: 1px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+//	Conture text
+//	- Small sized, uppercased and more spaced text
+%conture-text{
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+//	Basic text
+//	-	Text style used in basic paragraphs
+%basic-text{
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	font-weight: 300;
+	color: palette(black, asphalt);
+}
+
+//	Hypertext fix
+%hypertext{
+	display: inline-block;
+	text-decoration: none;
+}
+
+//	Absolute center
+%left-to-center{
+	left: 50%;
+	transform: translateX(-50%);
+}
