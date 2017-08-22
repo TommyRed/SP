@@ -9,7 +9,7 @@
 //  Media query without preset breakpoints
 //
 @mixin mq($breakpoint) {
-  @media only screen and (min-width: $breakpoint-small) {
+  @media (min-width: $breakpoint) {
     @content;
   }
 }

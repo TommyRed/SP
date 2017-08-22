@@ -1,0 +1,59 @@
+// ------
+// Colors
+// ------
+//
+//  Declaring basic set of colors
+//    - default variables
+//    - use these colors through PALETTE function
+//
+
+//
+//  DEFAULT COLOR VARIABLES
+//    - colors are placed in color palette and introduced in their specific color range
+//    - feel free to add / modify colors of your need
+
+$palettes: (
+        red: (
+                base: #ff0000,
+                brick: #D64541
+        ),
+        blue: (
+                base: #0000ff,
+                sky: #4696ff,
+                ocean: #145a95,
+                light: #00BCD4
+        ),
+        green: (
+                base: #00ff00
+        ),
+        black: (
+                base: #000000,
+                asphalt: #263238
+        ),
+        gray: (
+                base : #444,
+                light : #999,
+                xlight: #ccc
+        ),
+        white: (
+                base: #FFFFFF
+        ),
+        purple: (
+                base: #8E44AD
+        ),
+        brown: (
+                base: #3E2723
+        ),
+        orange: (
+                base: #F9690E
+        )
+);
+
+//
+//  Select color from palette
+//
+@function palette($palette: black, $tone: 'base') {
+        @if variable-exists(palettes) {
+                @return map-get(map-get($palettes, $palette), $tone);
+        }
+}

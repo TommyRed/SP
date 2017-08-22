@@ -19,22 +19,22 @@
 //
 //  Grid
 //
-@import "mixins/grid";
+@import "mixins/_grid";
 
 //
 //  Transform
 //
-@import "mixins/transform";
+@import "mixins/_transform";
 
 //
 //  Media queries
 //
-@import "mixins/media";
+@import "mixins/_media";
 
 //
 //  Resets
 //
-@import "particles/reset";
+@import "particles/_reset";
 
 //  ---------
 //  FUNCTIONS
@@ -43,11 +43,23 @@
 //
 //  Prefixer
 //
-@import "functions/prefixer";
+@import "functions/_prefixer";
 
 //
 //  Math
 //
-@import "functions/math";
+@import "functions/_math";
 
+//  ---------
+//  UTILITIES
+//  ---------
 
+//
+//	Color palette
+//
+@import "particles/colors";
+
+//
+//	Extendable classes
+//
+@import "particles/extendables";

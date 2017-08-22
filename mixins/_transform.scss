@@ -1,10 +1,9 @@
 //
 //  CSS3 Transform
 //
-
 //  Dependencies
-@import "../functions/math";
-@import "../functions/prefixer";
+@import "../functions/_math";
+@import "../functions/_prefixer";
 
 //  Variables
 $prefixes: moz ms o webkit;
@@ -12,7 +11,7 @@ $prefixes: moz ms o webkit;
 //
 //  Scale
 //
-@mixin scale($x: 1, $y: 1){
+@mixin scale($x: 1, $y: 1) {
 
   @include prefix(transform, scale($x, $y), $prefixes);
 
@@ -22,7 +21,7 @@ $prefixes: moz ms o webkit;
 //
 //  Translate
 //
-@mixin translate($value, $axis: X){
+@mixin translate($value, $axis: X) {
 
   @include prefix(transform, translate + $axis + "(" + $value + ")", $prefixes);
 
@@ -32,9 +31,9 @@ $prefixes: moz ms o webkit;
 //
 //  Rotate
 //
-@mixin rotate($value, $axis: Z){
+@mixin rotate($value, $axis: Z) {
 
-  @include prefix(rotate, rotate+ $axis + "(" + $value + ")", $prefixes);
+  @include prefix(rotate, rotate + $axis + "(" + $value + ")", $prefixes);
 
   transform: rotate + $axis + "(" + $value + ")";
 }
